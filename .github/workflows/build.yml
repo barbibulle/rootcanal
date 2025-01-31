@@ -33,6 +33,8 @@ jobs:
           cargo install pdl-compiler
 
       - name: Build
+        env:
+          USE_BAZEL_VERSION: 7.5.0
         run: |
           bazel build :rootcanal
           bazel build :librootcanal_ffi.so
